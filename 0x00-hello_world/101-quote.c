@@ -3,7 +3,7 @@
 /**
 * main - main function of program
 * Description: prints message to the standard error
-* Return: 0
+* Return: 1
 */
 
 int main(void)
