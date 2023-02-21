@@ -9,13 +9,13 @@
 
 int main(void)
 {
-unsigned long long a = 1, b = 2, c;
+long a = 1, b = 2, c;
 int i;
-printf("%llu, %llu", a, b);
+printf("%ld, %ld", a, b);
 for (i = 2; i < 50; i++)
 {
 c = a + b;
-printf(", %llu", c);
+printf(", %ld", c);
 a = b;
 b = c;
 }
