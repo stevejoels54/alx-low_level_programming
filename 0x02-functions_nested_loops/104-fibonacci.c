@@ -12,8 +12,9 @@ int main(void)
 {
 unsigned long int a = 0, b = 1, c = 0, d = 2;
 unsigned long int hold1, hold2, hold3;
+int i;
 printf("%lu, %lu, ", b, d);
-for (int i = 2; i < 98; i++)
+for (i = 2; i < 98; i++)
 {
 if (b + d > MAX || c > 0)
 {
