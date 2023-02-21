@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <math.h>
 
 /**
 * main - Entry point
@@ -9,18 +10,20 @@
 
 int main(void)
 {
-int term = 1;
-int prev = 1;
-int temp;
-int count = 2;
-printf("%d, %d", term, prev);
-while (count < 98)
+const double phi = (1 + sqrt(5)) / 2;
+double fib = 1, prev = 1, temp;
+int i;
+printf("%.0lf, %.0lf, ", prev, fib);
+for (i = 3; i <= 98; i++)
 {
-temp = term + prev;
-prev = term;
-term = temp;
-count++;
-printf(", %d", term);
+temp = fib;
+fib = round(pow(phi, i - 1) / sqrt(5));
+prev = round(temp);
+printf("%.0lf", fib);
+if (i != 98)
+{
+printf(", ");
+}
 }
 printf("\n");
 return (0);
