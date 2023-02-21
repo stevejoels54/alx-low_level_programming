@@ -2,13 +2,13 @@
 
 /**
 * main - main function of program
-* Description: prints "0-putchar.c"
+* Description: prints "_putchar"
 * Return: 0
 */
 
 int main(void)
 {
-char string = "_putchar\n";
+char string[] = "_putchar\n";
 int i = 0;
 while (string[i] != "\0")
 {
