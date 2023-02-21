@@ -1,26 +1,38 @@
 #include <stdio.h>
-#include <math.h>
+
+#define MAX 10000000000
 
 /**
-* main - Entry point
-* Description: program that finds and prints the first 98 Fibonacci numbers
-* ,starting with 1 and 2, followed by a new line
-* Return: 0 always
-*/
-
+ * main - Entry point
+ * Description: Find and print the first 98 Fibonacci numbers starting with
+ * 1 and 2. Numbers should be comma and space separated.
+ * Return: 0 Always
+ */
 int main(void)
 {
-const double phi = (1 + sqrt(5)) / 2;
-double fib = 1, prev = 1, temp;
-int i;
-printf("%.0f, %.0f, ", prev, fib);
-for (i = 3; i <= 98; i++)
+unsigned long int a = 0, b = 1, c = 0, d = 2;
+unsigned long int hold1, hold2, hold3;
+printf("%lu, %lu, ", b, d);
+for (int i = 2; i < 98; i++)
 {
-temp = fib;
-fib = round(pow(phi, i - 1) / sqrt(5));
-prev = round(temp);
-printf("%.0f", fib);
-if (i != 98)
+if (b + d > MAX || c > 0)
+{
+hold1 = (b + d) / MAX;
+hold2 = (b + d) % MAX;
+hold3 = a + c + hold1;
+a = c;
+c = hold3;
+b = d;
+d = hold2;
+printf("%lu%010lu", c, d);
+}
+else
+{
+d = b + d;
+b = d - b;
+printf("%lu", d);
+}
+if (i != 97)
 {
 printf(", ");
 }
