@@ -15,7 +15,7 @@ if (n > 98)
 {
 for (i = n; i >= 98; i--)
 {
-_putchar(i + '0');
+printf("%d",i);
 if (i != 98)
 {
 _putchar(',');
@@ -27,7 +27,7 @@ else if (n < 98)
 {
 for (i = n; i <= 98; i++)
 {
-_putchar(i + '0');
+printf("%d",i);
 if (i != 98)
 {
 _putchar(',');
@@ -37,6 +37,6 @@ _putchar(' ');
 }
 else
 {
-_putchar('98');
+printf("98\n");
 }
 }
