@@ -13,13 +13,13 @@ int main(void)
 const double phi = (1 + sqrt(5)) / 2;
 double fib = 1, prev = 1, temp;
 int i;
-printf("%.0lf, %.0lf, ", prev, fib);
+printf("%.0f, %.0f, ", prev, fib);
 for (i = 3; i <= 98; i++)
 {
 temp = fib;
 fib = round(pow(phi, i - 1) / sqrt(5));
 prev = round(temp);
-printf("%.0lf", fib);
+printf("%.0f", fib);
 if (i != 98)
 {
 printf(", ");
