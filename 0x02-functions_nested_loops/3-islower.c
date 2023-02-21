@@ -2,6 +2,7 @@
 
 /**
 * print_alphabet - prototype
+* @c: value passed to function for checking
 * Description:  function that checks for lowercase character
 * Return: 1 if true, 0 if false
 */
