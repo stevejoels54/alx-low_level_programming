@@ -25,15 +25,15 @@ _putchar('0');
 }
 else if (value > 9 && value < 100)
 {
-printf("%d,  ", value);
+printf(",  %d", value);
 }
 else if (value > 99)
 {
-printf("%d, ", value);
+printf(", %d", value);
 }
 else
 {
-printf("%d,   ", value);
+printf(",   %d", value);
 }
 }
 _putchar('\n');
