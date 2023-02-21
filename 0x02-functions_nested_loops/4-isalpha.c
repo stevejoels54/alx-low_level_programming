@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
-* print_alphabet - prototype
+* _isalph - Entry point
 * Description: function that checks for alphabetic character
 * Return: 1 if true, 0 if false
 */
