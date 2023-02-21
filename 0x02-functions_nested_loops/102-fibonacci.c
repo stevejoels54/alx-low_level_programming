@@ -9,24 +9,15 @@
 
 int main(void)
 {
-int n = 50, first = 1, second = 2, next, i;
-for (i = 0; i < n; i++)
+unsigned long long a = 1, b = 2, c;
+int i;
+printf("%llu, %llu", a, b);
+for (i = 2; i < 50; i++)
 {
-if (i == 0)
-{
-printf("%d", first);
-}
-else if (i == 1)
-{
-printf(", %d", second);
-}
-else
-{
-next = first + second;
-printf(", %d", next);
-first = second;
-second = next;
-}
+c = a + b;
+printf(", %llu", c);
+a = b;
+b = c;
 }
 printf("\n");
 return (0);
