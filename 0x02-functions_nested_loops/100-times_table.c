@@ -13,10 +13,10 @@ void print_times_table(int n)
 int i, j, value;
 if (n <= 15 && n >= 0)
 {
-for (i = 0; i < n + 1; i++)
+for (i = 0; i <= n; i++)
 {
 value = 0;
-for (j = 0; j < n + 1; j++)
+for (j = 0; j < n; j++)
 {
 value = i * j;
 if (j == 0)
