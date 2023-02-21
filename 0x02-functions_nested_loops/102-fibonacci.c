@@ -9,28 +9,25 @@
 
 int main(void)
 {
-int n = 50;
-int fib[n];
-int i;
-
-/**compute the Fibonacci sequence*/
-fib[0] = 1;
-fib[1] = 2;
-for (i = 2; i < n; i++)
-{
-fib[i] = fib[i - 1] + fib[i - 2];
-}
-
-/**print the Fibonacci sequence separated by comma and space*/
+int n = 50, first = 1, second = 2, next, i;
 for (i = 0; i < n; i++)
 {
-printf("%d", fib[i]);
-if (i < n - 1)
+if (i == 0)
 {
-printf(", ");
+printf("%d", first);
+}
+else if (i == 1)
+{
+printf(", %d", second);
+}
+else
+{
+next = first + second;
+printf(", %d", next);
+first = second;
+second = next;
 }
 }
 printf("\n");
-
 return (0);
 }
