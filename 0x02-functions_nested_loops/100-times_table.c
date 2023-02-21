@@ -34,7 +34,7 @@ else if (value > 99)
 {
 _putchar(',');
 _putchar(' ');
-_putchar(value / 10 + '0');
+_putchar(value / 100 + '0');
 _putchar((value / 10) % 10 + '0');
 _putchar(value % 10 + '0');
 }
