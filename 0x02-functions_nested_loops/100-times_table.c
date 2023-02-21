@@ -24,27 +24,15 @@ _putchar('0');
 }
 else if (value > 9 && value < 100)
 {
-_putchar(',');
-_putchar(' ');
-_putchar(' ');
-_putchar(value / 10 + '0');
-_putchar(value % 10 + '0');
+printf("%d,  ", value);
 }
 else if (value > 99)
 {
-_putchar(',');
-_putchar(' ');
-_putchar(value / 100 + '0');
-_putchar((value / 10) % 10 + '0');
-_putchar(value % 10 + '0');
+printf("%d, ", value);
 }
 else
 {
-_putchar(',');
-_putchar(' ');
-_putchar(' ');
-_putchar(' ');
-_putchar(value + '0');
+printf("%d,   ", value);
 }
 }
 _putchar('\n');
