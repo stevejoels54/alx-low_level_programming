@@ -22,12 +22,12 @@ for (l = 0; l < 10; l++)
 /**Only print 00 : 00 to 23 : 59*/
 if ((i <= 1 && j <= 9) || (i == 2 && j <= 3))
 {
-putchar(i + '0');
-putchar(j + '0');
-putchar(':');
-putchar(k + '0');
-putchar(l + '0');
-putchar('\n');
+_putchar(i + '0');
+_putchar(j + '0');
+_putchar(':');
+_putchar(k + '0');
+_putchar(l + '0');
+_putchar('\n');
 }
 }
 }
