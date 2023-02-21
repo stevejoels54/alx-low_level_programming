@@ -28,7 +28,7 @@ _putchar('\n');
 /**Stop the loop when 23 : 59 is printed*/
 if (i == 2 && j == 3 && k == 5 && l == 9)
 {
-exit(0);
+break;
 }
 }
 }
