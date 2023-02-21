@@ -19,16 +19,15 @@ for (k = 0; k < 6; k++)
 {
 for (l = 0; l < 10; l++)
 {
-_putchar(i + '0');
-_putchar(j + '0');
-_putchar(':');
-_putchar(k + '0');
-_putchar(l + '0');
-_putchar('\n');
-/**Stop the loop when 23 : 59 is printed*/
-if (i == 2 && j == 3 && k == 5 && l == 9)
+/**Only print 00 : 00 to 23 : 59*/
+if ((i <= 1 && j <= 9) || (i == 2 && j <= 3))
 {
-break;
+putchar(i + '0');
+putchar(j + '0');
+putchar(':');
+putchar(k + '0');
+putchar(l + '0');
+putchar('\n');
 }
 }
 }
