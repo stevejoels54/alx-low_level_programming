@@ -23,7 +23,7 @@ product = i * j;
 if (product > 99)
 {
 printf(", %d", product);
-}              
+}
 else if (product > 9)
 {
 printf(",  %d", product);
