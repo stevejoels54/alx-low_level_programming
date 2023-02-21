@@ -19,7 +19,6 @@ for (k = 0; k < 6; k++)
 {
 for (l = 0; l < 10; l++)
 {
-printf("%d%d : %d%d \t", i, j, k, l);
 _putchar(i + '0');
 _putchar(j + '0');
 _putchar(':');
