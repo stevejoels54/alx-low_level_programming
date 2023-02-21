@@ -17,21 +17,21 @@ for (j = 0; j < 10; j++)
 value = i * j;
 if (j == 0)
 {
-putchar('0');
+_putchar('0');
 }
 else if (value > 9)
 {
-putchar(',');
-putchar(' ');
-putchar(value / 10 + '0');
-putchar(value % 10 + '0');
+_putchar(',');
+_putchar(' ');
+_putchar(value / 10 + '0');
+_putchar(value % 10 + '0');
 }
 else
 {
-putchar(',');
-putchar(' ');
-putchar(' ');
-putchar(value + '0');
+_putchar(',');
+_putchar(' ');
+_putchar(' ');
+_putchar(value + '0');
 }
 }
 _putchar('\n');
