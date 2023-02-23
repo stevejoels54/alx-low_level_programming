@@ -17,11 +17,11 @@ for (j = 0; j <= 14; j++)
 k = j;
 if (j > 9)
 {
-putchar(j / 10 + '0');
+_putchar(j / 10 + '0');
 k = j % 10;
 }
 
-putchar(k + '0');
+_putchar(k + '0');
 }
 _putchar('\n');
 }
