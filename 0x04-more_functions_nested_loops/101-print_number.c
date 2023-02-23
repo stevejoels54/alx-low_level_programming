@@ -9,14 +9,23 @@
 
 void print_number(int n)
 {
+int digit, divisor = 1;
+
 if (n < 0)
 {
-_putchar('-');
+putchar(45);
 n = -n;
 }
-if (n / 10)
+
+while (n / divisor > 9)
 {
-print_number(n / 10);
+divisor *= 10;
 }
-_putchar(n % 10 + '0');
+while (divisor)
+{
+digit = n / divisor;
+n %= divisor;
+divisor /= 10;
+_putchar(digit + '0');
+}
 }
