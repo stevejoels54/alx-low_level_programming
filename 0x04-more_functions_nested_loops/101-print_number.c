@@ -13,7 +13,7 @@ int digit, divisor = 1;
 
 if (n < 0)
 {
-putchar(45);
+_putchar(45);
 n = -n;
 }
 
