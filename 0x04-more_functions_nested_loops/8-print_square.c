@@ -2,7 +2,7 @@
 
 /**
 * print_square - Entry point
-* @n: value passed to function to print square
+* @size: value passed to function to print square
 * Description: function that prints a square, followed by a new line
 * Return: void
 */
