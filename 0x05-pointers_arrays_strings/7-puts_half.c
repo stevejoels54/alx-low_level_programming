@@ -15,15 +15,7 @@ while (str[len] != '\0')
 {
 len++;
 }
-if (len % 2 == 0)
-{
-start = len / 2;
-_putchar(start);
-}
-else
-{
-start = (len - 1) / 2 + 1;
-}
+start = len % 2 == 0 ? len / 2 : (len - 1) / 2 + 1;
 for (i = start; i < len; i++)
 {
 _putchar(str[i]);
