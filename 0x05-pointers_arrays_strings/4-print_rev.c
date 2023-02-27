@@ -3,7 +3,8 @@
 /**
 * print_rev - Entry point
 * @s: string to reverse print
-* Description: function that prints a string, in reverse, followed by a new line
+* Description: function that prints a string, in reverse
+* ,followed by a new line
 * Return: Nothing
 */
 
@@ -19,4 +20,5 @@ while (i >= 0)
 _putchar(s[i]);
 i--;
 }
+_putchar('\n');
 }
