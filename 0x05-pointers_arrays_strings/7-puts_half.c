@@ -14,6 +14,7 @@ while (str[len] != '\0')
 {
 len++;
 }
+len = len - 1;
 start = len % 2 == 0 ? len / 2 : (len - 1) / 2 + 1;
 for (i = start; i < len; i++)
 {
