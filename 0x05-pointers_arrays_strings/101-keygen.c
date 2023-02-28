@@ -15,18 +15,17 @@
 
 int main(void)
 {
-  char password[PASSWORD_LENGTH + 1];
-  int i, index;
+int sum = 0;
+char c;
 
-  srand(time(NULL));
+srand(time(NULL));
+while (sum <= 2645)
+{
+    c = rand() % 128;
+    sum += c;
+    putchar(c);
+}
+putchar(2772 - sum);
+return 0;
 
-  for (i = 0; i < PASSWORD_LENGTH; i++) {
-    index = rand() % (sizeof(CHARACTERS) - 1);
-    password[i] = CHARACTERS[index];
-  }
-  password[PASSWORD_LENGTH] = '\0';
-
-  printf("%s\n", password);
-
-  return (0);
 }
