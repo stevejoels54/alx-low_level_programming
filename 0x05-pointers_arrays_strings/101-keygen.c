@@ -15,7 +15,9 @@ int main(void)
 int sum = 0;
 char c;
 
-srand(time(NULL));
+time_t t;
+srand(time(&t));
+
 while (sum <= 2645)
 {
     c = rand() % 128;
