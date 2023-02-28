@@ -10,9 +10,6 @@
  * Return: Always zero
  */
 
-#define PASSWORD_LENGTH 6
-#define CHARACTERS "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
-
 int main(void)
 {
 int sum = 0;
