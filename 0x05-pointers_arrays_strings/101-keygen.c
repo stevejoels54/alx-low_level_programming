@@ -18,10 +18,8 @@ int main(void)
   char password[PASSWORD_LENGTH + 1];
   int i, index;
 
-  // Seed the random number generator with the current time
   srand(time(NULL));
 
-  // Generate a random password
   for (i = 0; i < PASSWORD_LENGTH; i++) {
     index = rand() % (sizeof(CHARACTERS) - 1);
     password[i] = CHARACTERS[index];
