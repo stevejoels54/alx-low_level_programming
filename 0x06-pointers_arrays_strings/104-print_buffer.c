@@ -1,5 +1,5 @@
-#include "main.h"
 #include <stdio.h>
+#include "main.h"
 
 void print_hex(char *b, int size);
 void print_ascii(char *b, int size);
