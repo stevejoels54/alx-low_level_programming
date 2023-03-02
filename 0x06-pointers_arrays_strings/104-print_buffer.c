@@ -5,30 +5,6 @@ void print_hex(char *b, int size);
 void print_ascii(char *b, int size);
 
 /**
- * print_buffer - Entry
- * Description: Prints a buffer 10 bytes at a time, starting with
- *                the byte position, then showing the hex content,
- *                then displaying printable charcaters.
- * @b: The buffer to be printed.
- * @size: The number of bytes to be printed from the buffer.
- */
-
-
-void print_buffer(char *b, int size)
-{
-int i;
-if (size <= 0)
-{
-printf("\n");
-}
-for (i = 0; i < size; i += 10)
-{
-print_hex(b + i, size - i);
-print_ascii(b + i, size - i);
-}
-}
-
-/**
  * print_hex - Entry
  * Description: Prints hex value
  * @b: The buffer to be printed in hex.
@@ -83,3 +59,28 @@ printf(" ");
 }
 printf("\n");
 }
+
+/**
+ * print_buffer - Entry
+ * Description: Prints a buffer 10 bytes at a time, starting with
+ *                the byte position, then showing the hex content,
+ *                then displaying printable charcaters.
+ * @b: The buffer to be printed.
+ * @size: The number of bytes to be printed from the buffer.
+ */
+
+
+void print_buffer(char *b, int size)
+{
+int i;
+if (size <= 0)
+{
+printf("\n");
+}
+for (i = 0; i < size; i += 10)
+{
+print_hex(b + i, size - i);
+print_ascii(b + i, size - i);
+}
+}
+
