@@ -16,12 +16,13 @@ void print_ascii(char *b, int size);
 
 void print_buffer(char *b, int size)
 {
+int i;
 if (size <= 0)
 {
 printf("\n");
 return;
 }
-for (int i = 0; i < size; i += 10)
+for (i = 0; i < size; i += 10)
 {
 print_hex(b + i, size - i);
 print_ascii(b + i, size - i);
@@ -37,8 +38,9 @@ print_ascii(b + i, size - i);
 
 void print_hex(char *b, int size)
 {
+int i;
 printf("%08x:", (unsigned int)b);
-for (int i = 0; i < 10; i++)
+for (i = 0; i < 10; i++)
 {
 if (i < size)
 {
@@ -61,7 +63,8 @@ printf("  ");
 
 void print_ascii(char *b, int size)
 {
-for (int i = 0; i < 10; i++)
+int i
+for (i = 0; i < 10; i++)
 {
 if (i < size)
 {
