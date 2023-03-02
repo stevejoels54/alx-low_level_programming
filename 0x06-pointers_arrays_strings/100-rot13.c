@@ -9,7 +9,7 @@
 
 char *rot13(char *str)
 {
-int i = 0;
+int i, j = 0;
 char rot13[2][52] = {
 {'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M',
 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z',
@@ -22,7 +22,7 @@ char rot13[2][52] = {
 
 while (str[i])
 {
-for (int j = 0; j < 52; j++)
+for (j = 0; j < 52; j++)
 {
 if (str[i] == rot13[0][j])
 {
