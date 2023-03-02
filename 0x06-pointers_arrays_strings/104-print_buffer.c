@@ -1,6 +1,9 @@
 #include "main.h"
 #include <stdio.h>
 
+void print_hex(char *b, int size);
+void print_ascii(char *b, int size);
+
 /**
  * print_buffer - Entry
  * Description: Prints a buffer 10 bytes at a time, starting with
@@ -13,40 +16,62 @@
 
 void print_buffer(char *b, int size)
 {
-int i, j;
-unsigned char c;
 if (size <= 0)
 {
 printf("\n");
 return;
 }
-for (i = 0; i < size; i += 10)
+for (int i = 0; i < size; i += 10)
 {
-printf("%08x: ", i);
-for (j = i; j < i + 10; j++)
+print_hex(b + i, size - i);
+print_ascii(b + i, size - i);
+}
+}
+
+/**
+ * print_hex - Entry
+ * Description: Prints hex value
+ * @b: The buffer to be printed in hex.
+ * @size: The number of bytes to be printed from the buffer.
+ */
+
+void print_hex(char *b, int size)
 {
-if (j < size)
+printf("%08x:", (unsigned int)b);
+for (int i = 0; i < 10; i++)
 {
-printf("%02x ", b[j]);
+if (i < size)
+{
+printf(" %02x", b[i] & 0xff);
 }
 else
 {
 printf("   ");
 }
 }
-printf(" ");
-for (j = i; j < i + 10; j++)
+printf("  ");
+}
+
+/**
+ * print_ascii - Entry
+ * Description: Prints ascii value
+ * @b: The buffer to be printed in ascii.
+ * @size: The number of bytes to be printed from the buffer.
+ */
+
+void print_ascii(char *b, int size)
 {
-if (j < size)
+for (int i = 0; i < 10; i++)
 {
-c = b[j];
-if (c < 32 || c > 126)
+if (i < size)
 {
-printf(".");
+if (b[i] >= 32 && b[i] <= 126)
+{
+printf("%c", b[i]);
 }
 else
 {
-printf("%c", c);
+printf(".");
 }
 }
 else
@@ -55,5 +80,4 @@ printf(" ");
 }
 }
 printf("\n");
-}
 }
