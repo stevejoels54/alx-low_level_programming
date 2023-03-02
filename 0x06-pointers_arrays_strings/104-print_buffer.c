@@ -20,7 +20,6 @@ int i;
 if (size <= 0)
 {
 printf("\n");
-return;
 }
 for (i = 0; i < size; i += 10)
 {
