@@ -33,7 +33,7 @@ printf("  ");
  * print_ascii - Entry
  * Description: Prints ascii value
  * @b: The buffer to be printed in ascii.
- * @size: The number of bytes to be printed from the buffer.
+ * @size: The number of bytes to be printed from the buffer
  */
 
 void print_ascii(char *b, int size)
