@@ -9,7 +9,7 @@
 
 char *leet(char *str)
 {
-int i = 0;
+int i, j = 0;
 char leet[5][3] = {
 {'a', 'A', '4'},
 {'e', 'E', '3'},
@@ -19,7 +19,7 @@ char leet[5][3] = {
 
 while (str[i] != '\0')
 {
-for (int j = 0; j < 5; j++)
+for (j = 0; j < 5; j++)
 {
 if (str[i] == leet[j][0] || str[i] == leet[j][1])
 {
