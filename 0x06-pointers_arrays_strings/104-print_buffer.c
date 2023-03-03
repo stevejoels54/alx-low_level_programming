@@ -83,4 +83,3 @@ print_hex(b + i, size - i);
 print_ascii(b + i, size - i);
 }
 }
-
