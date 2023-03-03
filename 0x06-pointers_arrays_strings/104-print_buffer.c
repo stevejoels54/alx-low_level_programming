@@ -14,7 +14,7 @@ void print_ascii(char *b, int size);
 void print_hex(char *b, int size)
 {
 int i;
-printf("%08x:", (unsigned int)b);
+printf("%08x:", b);
 for (i = 0; i < 10; i++)
 {
 if (i < size)
