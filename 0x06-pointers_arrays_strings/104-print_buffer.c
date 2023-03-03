@@ -26,9 +26,9 @@ printf("%08x: ", i);
 for (j = i; j < i + 10; j++)
 {
 if (j < size)
-    printf("%02x", b[j]);
+printf("%02x", b[j]);
 else
-    printf("   ");
+printf("   ");
 }
 printf(" ");
 for (j = i; j < i + 10; j++)
@@ -37,12 +37,12 @@ if (j < size)
 {
 c = b[j];
 if (c < 32 || c > 126)
-   printf(".");
+printf(".");
 else             
-   printf("%c", c);
+printf("%c", c);
 }
 else
-   printf(" ");
+printf(" ");
 }
 printf("\n");
 }
