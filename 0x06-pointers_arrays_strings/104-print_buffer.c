@@ -28,7 +28,7 @@ for (i = 0; i < size; i += 10)
     for (j = i; j < i + 10; j++)
     {
         if (j < size)
-            printf("%02x ", b[j]);
+            printf("%02x", b[j]);
         else
             printf("   ");
     }
