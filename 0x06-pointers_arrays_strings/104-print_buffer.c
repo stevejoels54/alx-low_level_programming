@@ -28,13 +28,9 @@ void print_buffer(char *b, int size)
         for (j = i; j < i + 10; j++)
         {
             if (j < size)
-            {
                 printf("%02x ", b[j]);
-            }
             else
-            {
                 printf("   ");
-            }
         }
 
         printf(" ");
@@ -45,18 +41,12 @@ void print_buffer(char *b, int size)
             {
                 c = b[j];
                 if (c < 32 || c > 126)
-                {
                     printf(".");
-                }
-                else
-                {
+                else             
                     printf("%c", c);
-                }
             }
             else
-            {
                 printf(" ");
-            }
         }
 
         printf("\n");
