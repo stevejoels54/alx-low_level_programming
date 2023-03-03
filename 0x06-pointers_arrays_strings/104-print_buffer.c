@@ -17,38 +17,33 @@ unsigned char c;
 
 if (size <= 0)
 {
-    printf("\n");
-    return;
+printf("\n");
+return;
 }
-
 for (i = 0; i < size; i += 10)
 {
-    printf("%08x: ", i);
-
-    for (j = i; j < i + 10; j++)
-    {
-        if (j < size)
-            printf("%02x", b[j]);
-        else
-            printf("   ");
-    }
-
-    printf(" ");
-
-    for (j = i; j < i + 10; j++)
-    {
-        if (j < size)
-        {
-            c = b[j];
-            if (c < 32 || c > 126)
-                printf(".");
-            else             
-                printf("%c", c);
-        }
-        else
-            printf(" ");
-    }
-
-    printf("\n");
+printf("%08x: ", i);
+for (j = i; j < i + 10; j++)
+{
+if (j < size)
+    printf("%02x", b[j]);
+else
+    printf("   ");
+}
+printf(" ");
+for (j = i; j < i + 10; j++)
+{
+if (j < size)
+{
+c = b[j];
+if (c < 32 || c > 126)
+   printf(".");
+else             
+   printf("%c", c);
+}
+else
+   printf(" ");
+}
+printf("\n");
 }
 }
