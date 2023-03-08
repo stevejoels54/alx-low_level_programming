@@ -1,6 +1,7 @@
 #include "main.h"
 
 int _strlen_recursion(char *s);
+int is_palindrome_rec(char *s, int start, int end);
 
 /**
  * is_palindrome - finds  palindrome
@@ -11,15 +12,30 @@ int _strlen_recursion(char *s);
 int is_palindrome(char *s)
 {
 int len = _strlen_recursion(s);
-int i;
-for (i = 0; i < len / 2; i++)
+return (is_palindrome_rec(s, 0, len - 1));
+}
+
+/**
+ * is_palindrome_rec - Recursive helper function for is_palindrome.
+ *
+ * @s: The string to check.
+ * @start: The index of the first character to check.
+ * @end: The index of the last character to check.
+ *
+ * Return: 1 if the substring is a palindrome, 0 otherwise.
+ */
+
+int is_palindrome_rec(char *s, int start, int end)
 {
-if (s[i] != s[len - i - 1])
+if (start >= end)
+{
+return (1);
+}
+if (s[start] != s[end])
 {
 return (0);
 }
-}
-return (1);
+return (is_palindrome_rec(s, start + 1, end - 1));
 }
 
 /**
