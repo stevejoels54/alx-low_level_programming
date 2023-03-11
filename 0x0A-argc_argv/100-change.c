@@ -48,7 +48,15 @@ printf("Error\n");
 return (1);
 }
 cents = atoi(argv[1]);
+if (cents < 0)
+{
+printf("0\n");
+return (0);
+}
+else
+{
 num_coins = get_min_coins(cents);
 printf("%d\n", num_coins);
+}
 return (0);
 }
