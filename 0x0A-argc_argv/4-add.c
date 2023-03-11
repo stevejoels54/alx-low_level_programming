@@ -13,7 +13,7 @@
 int main(int argc, char *argv[])
 {
 int sum = 0;
-int i;
+int i, j;
 char *ptr;
 if (argc == 1)
 {
@@ -22,9 +22,10 @@ return (0);
 }
 for (i = 1; i < argc; i++)
 {
-for (*ptr = argv[i]; *ptr; ptr++)
+ptr = argv[i];
+for (j = 0; ptr[j]; j++)
 {
-if (!isdigit(*ptr))
+if (!isdigit(ptr[j]))
 {
 printf("Error\n");
 return (1);
