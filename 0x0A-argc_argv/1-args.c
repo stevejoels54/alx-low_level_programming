@@ -10,11 +10,19 @@
 
 int main(int argc, char *argv[])
 {
-int i;
-for (i = 0; argv[0][i] != '\0'; i++)
+int i = 0;
+if (argc == 1)
 {
-putchar(argv[0][i]);
+printf("%d\n", argc - 1);
 }
-putchar('\n');
-return 0;
+else
+{
+while (*argv)
+{
+i++;
+argv++;
+}
+printf("%d\n", i - 1);
+}
+return (0);
 }
