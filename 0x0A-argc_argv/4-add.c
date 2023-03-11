@@ -13,14 +13,16 @@
 int main(int argc, char *argv[])
 {
 int sum = 0;
+int i;
+char *ptr;
 if (argc == 1)
 {
 printf("0\n");
 return (0);
 }
-for (int i = 1; i < argc; i++)
+for (i = 1; i < argc; i++)
 {
-for (char *ptr = argv[i]; *ptr; ptr++)
+for (*ptr = argv[i]; *ptr; ptr++)
 {
 if (!isdigit(*ptr))
 {
