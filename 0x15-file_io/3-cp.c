@@ -51,7 +51,7 @@ int main(int argc, char **argv)
 	ssize_t read_bytes, written_bytes;
 
 	if (argc != 3)
-		print_error("Usage: %s file_from file_to\n", argv[0], 97);
+		print_error("Usage: cp file_from file_to\n", "", 97);
 
 	read_from = open(argv[1], O_RDONLY);
 	if (read_from == -1)
